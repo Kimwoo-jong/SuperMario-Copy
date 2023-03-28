@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Stairs
+  - Monster
+  - Obstacles
+  - Clear
+  - Bottom
+  - Ground
+  - Dead
+  - M_Head
+  - Flag
+  - Castle
+  - Turtle
+  - Head_super
+  - Head
+  - Goal
+  - Fire
+  - Coin
+  - Mushroom
+  - Flower
+  - Life
+  - Star
+  - mushbox
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemy
+  - Die
+  - Ground
+  - Item
+  - Bullet
+  - Dead
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 501388239
+    locked: 0

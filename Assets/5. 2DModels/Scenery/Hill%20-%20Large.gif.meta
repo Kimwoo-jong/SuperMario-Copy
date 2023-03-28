@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 5bafe9af08d27da49bc0f9bf657f3d3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1693926403007748877
+    second: Hill%20-%20Large_0
+  - first:
+      213: -2658088887760436355
+    second: Hill%20-%20Large_1
+  - first:
+      213: 4202003716207433863
+    second: Hill%20-%20Large_2
+  - first:
+      213: 7745872453799518643
+    second: Hill%20-%20Large_3
+  - first:
+      213: 8192568011946061029
+    second: Hill%20-%20Large_4
+  - first:
+      213: -5268811115841909859
+    second: Hill%20-%20Large_5
+  - first:
+      213: -3950691666125406757
+    second: Hill%20-%20Large_6
+  - first:
+      213: -704349790975075339
+    second: Hill%20-%20Large_7
+  - first:
+      213: 6417994176886807866
+    second: Hill%20-%20Large_8
+  - first:
+      213: 1267494495977414299
+    second: Hill%20-%20Large_9
+  - first:
+      213: 8132898241595113009
+    second: Hill%20-%20Large_10
+  - first:
+      213: -4686544424187429202
+    second: Hill%20-%20Large_11
+  - first:
+      213: -6355527570510899893
+    second: Hill%20-%20Large_12
+  - first:
+      213: -7025382545112313561
+    second: Hill%20-%20Large_13
+  - first:
+      213: 1588133303204270255
+    second: Hill%20-%20Large_14
+  - first:
+      213: -2060232691938499749
+    second: Hill%20-%20Large_15
+  - first:
+      213: -2262120127410559099
+    second: Hill%20-%20Large_16
+  - first:
+      213: -6564778654501047864
+    second: Hill%20-%20Large_17
+  - first:
+      213: 9204163689703050582
+    second: Hill%20-%20Large_18
+  - first:
+      213: -7509076412789746593
+    second: Hill%20-%20Large_19
+  - first:
+      213: 5494453915175525616
+    second: Hill%20-%20Large_20
+  - first:
+      213: -581176211391723422
+    second: Hill%20-%20Large_21
+  - first:
+      213: 3867593595713904188
+    second: Hill%20-%20Large_22
+  - first:
+      213: -3298181883518340864
+    second: Hill%20-%20Large_23
+  - first:
+      213: 1125815268944164107
+    second: Hill%20-%20Large_24
+  - first:
+      213: -7499933870617586355
+    second: Hill%20-%20Large_25
+  - first:
+      213: 2613793244710254872
+    second: Hill%20-%20Large_26
+  - first:
+      213: -3494073407189035255
+    second: Hill%20-%20Large_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 42
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hill%20-%20Large_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4611949e6fd78e0800000000000000
+      internalID: -1693926403007748877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8a7a570ce1d52ff4ea5a9aa3d308cd9b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
