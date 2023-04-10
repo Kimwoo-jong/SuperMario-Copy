@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerControl : MonoBehaviour
 {
     public static PlayerControl instance;
+    public static AnimController animatorControl;
 
     public GameObject marioHead;
     public GameObject s_marioHead;
@@ -47,6 +48,8 @@ public class PlayerControl : MonoBehaviour
     [HideInInspector]
     public bool isPaused = false;
 
+    private bool isDead;
+
     public int playerHp = 1;                    // 작은 마리오의 Hp
     [HideInInspector]
     public int maxPlayerHp = 3;                 // 꽃 먹은 마리오의 최대 체력
@@ -73,11 +76,12 @@ public class PlayerControl : MonoBehaviour
         capsule.isTrigger = false;
         box.isTrigger = false;
         s_marioHead.SetActive(false);
+        isDead = false;
 
         gameObject.transform.position = new Vector2(-73.8f, 2.0f);
 
         jumpForce = 8.0f;
-        moveForce = 500f;
+        moveForce = 350;
     }
     void Update()
     {
@@ -153,21 +157,18 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                InvokeRepeating("Attack", 0.5f, 1.0f);
+                InvokeRepeating("Attack", 0.5f, 1.5f);
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            maxSpeed = 5.0f;
+            maxSpeed = 4.5f;
         }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Mushroom")
+        if (col.gameObject.tag == "Mushroom")
         {
-            anim.SetTrigger("Mushroom");
-            anim.SetInteger("Hp", 2);
-
             capsule.size = new Vector2((float)1.12f, 0.18f);
             capsule.offset = new Vector2((float)0.0f, -1.0f);
             box.size = new Vector2((float)1.01f, 1.0f);
@@ -178,7 +179,7 @@ public class PlayerControl : MonoBehaviour
             isMarioGrow = true;
 
             playerHp++;
-            if(playerHp > 2)
+            if (playerHp > 2)
             {
                 playerHp = 2;
             }
@@ -202,7 +203,7 @@ public class PlayerControl : MonoBehaviour
                 isMarioFlower = false;
             }
 
-            else if(anim.GetInteger("Hp") == 2 || playerHp == 2)
+            else if (anim.GetInteger("Hp") == 2 || playerHp == 2)
             {
                 anim.SetInteger("Hp", 1);
                 playerHp = 1;
@@ -231,10 +232,6 @@ public class PlayerControl : MonoBehaviour
     {
         if (col.gameObject.tag == "Flower")
         {
-            //Debug.Log("꽃 먹었다.");
-            anim.SetTrigger("Flower");
-            anim.SetInteger("Hp", 3);
-
             capsule.size = new Vector2((float)1.12f, 0.18f);
             capsule.offset = new Vector2((float)0.0f, -1.0f);
             box.size = new Vector2((float)1.01f, 1.0f);
@@ -252,7 +249,7 @@ public class PlayerControl : MonoBehaviour
                 playerHp = maxPlayerHp;
             }
         }
-        if(col.gameObject.tag == "Flag")
+        if (col.gameObject.tag == "Flag")
         {
             if (Time.time > flagMarioTime + 0.1f)
             {
@@ -260,20 +257,20 @@ public class PlayerControl : MonoBehaviour
                 //Debug.Log("실행");
 
                 gameObject.SetActive(false);
-                if(playerHp == 1)
+                if (playerHp == 1)
                 {
                     flagMario.SetActive(true);
                     Instantiate(flagMario, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                     flagMario.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -0.01f);
                 }
-                else if(playerHp == 2)
+                else if (playerHp == 2)
                 {
                     flag_sMario.SetActive(true);
                     Instantiate(flag_sMario, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                     flag_sMario.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -0.01f);
                 }
 
-                else if(playerHp == 3)
+                else if (playerHp == 3)
                 {
                     flag_rMario.SetActive(true);
                     Instantiate(flag_rMario, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
@@ -327,16 +324,20 @@ public class PlayerControl : MonoBehaviour
     //죽으면 2.5초 뒤 재시작 됨.(csDeadZone 스크립트에서 관리)
     public void Die()
     {
-        anim.SetTrigger("Die");
+        if (!isDead)
+        {
+            isDead = true;
+            anim.SetTrigger("Die");
 
-        SoundManager.soundmanager.DeadSound();
-        BGMManager.instance.myAudio.Stop();
-        maxSpeed = 0f;
+            SoundManager.soundmanager.DeadSound();
+            BGMManager.instance.myAudio.Stop();
+            maxSpeed = 0f;
 
-        rigid.velocity = new Vector2(0f, 8.0f);
+            rigid.velocity = new Vector2(0f, 6.0f);
 
-        gameObject.layer = LayerMask.NameToLayer("Die");
-        transform.Find("Blockcheck").gameObject.SetActive(false);
+            gameObject.layer = LayerMask.NameToLayer("Die");
+            transform.Find("Blockcheck").gameObject.SetActive(false);
+        }
     }
     IEnumerator Invincible()
     {
@@ -356,7 +357,7 @@ public class PlayerControl : MonoBehaviour
 
         isHurt = false;
         anim.SetBool("Hit", false);
-        if(playerHp < 0)
+        if (playerHp < 0)
         {
             playerHp = 1;
         }

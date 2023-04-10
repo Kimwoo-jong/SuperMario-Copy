@@ -39544,6 +39544,7 @@ GameObject:
   - component: {fileID: 1337198358}
   - component: {fileID: 1337198357}
   - component: {fileID: 1337198359}
+  - component: {fileID: 1337198363}
   - component: {fileID: 1337198360}
   - component: {fileID: 1337198355}
   - component: {fileID: 1337198356}
@@ -39684,7 +39685,7 @@ MonoBehaviour:
   dirRight: 1
   isJump: 0
   jumpForce: 1
-  moveForce: 600
+  moveForce: 300
   maxSpeed: 5
   maxAccSpeed: 7
   isMarioGrow: 0
@@ -39834,6 +39835,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8666667, y: 1.0666667}
   m_EdgeRadius: 0
+--- !u!114 &1337198363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337198354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4d4a76586116c45934563f7cbd7804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1338906524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42970,6 +42983,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2098408944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2141025218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396190, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775463396191, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy_Mush
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987601775697391515, guid: df9a4eba44e2192479609a3e727b8736,
+        type: 3}
+      propertyPath: scoreUi
+      value: 
+      objectReference: {fileID: 729216997}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df9a4eba44e2192479609a3e727b8736, type: 3}
 --- !u!4 &2145760914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 111063906103497232, guid: 1d747baa21e850542bbc3870197766d2,
